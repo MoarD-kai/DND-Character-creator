@@ -1,0 +1,115 @@
+package application;
+	
+// Import JavaFX //
+import java.util.Scanner;
+
+// Declare Main Class //
+public class Main {
+
+	Scanner myScan = new Scanner(System.in);
+	
+	// Variables for classes //
+	static String chosenRace;
+	static String chosenClass;
+	static String chosenBackground;
+	
+	// Class for Race //
+	public void Race() { 
+		
+		// Declare array for race selection //
+		String strRace[] = {"Dragonborn", "Dwarf", "Elf", "Gnome", "Goliath",
+				"Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling", 
+				};		
+		System.out.println("Enter a number to select " + "your character's race.");
+		System.out.println("1: " + strRace[0]);
+		System.out.println("2: " + strRace[1]);
+		System.out.println("3: " + strRace[2]);
+		System.out.println("4: " + strRace[3]);
+		System.out.println("5: " + strRace[4]);
+		System.out.println("6: " + strRace[5]);
+		System.out.println("7: " + strRace[6]);
+		System.out.println("8: " + strRace[7]);
+		System.out.println("9: " + strRace[8]);
+		
+		// Save selected number input //
+		int i = myScan.nextInt();
+		chosenRace = strRace[i - 1];
+		System.out.println("Your character's race is " + chosenRace + ".");
+	}	
+	
+	// Class for Class //
+	public void Class() {
+		
+		// Declare array for class selection //
+		String strClass[] = {"Artificer", "Barbarian", "Bard", "Cleric",
+				"Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue",
+				"Sorcerer", "Warlock", "Wizard"
+				};
+		System.out.println("Please enter a number to select "
+					+ "your character's class.");
+		System.out.println("1: " + strClass[0]);
+		System.out.println("2: " + strClass[1]);
+		System.out.println("3: " + strClass[2]);
+		System.out.println("4: " + strClass[3]);
+		System.out.println("5: " + strClass[4]);
+		System.out.println("6: " + strClass[5]);
+		System.out.println("7: " + strClass[6]);
+		System.out.println("8: " + strClass[7]);
+		System.out.println("9: " + strClass[8]);
+		System.out.println("10: " + strClass[9]);
+		System.out.println("11: " + strClass[10]);
+		System.out.println("12: " + strClass[11]);
+		System.out.println("13: " + strClass[12]);
+
+		// Save selected number input //
+		int j = myScan.nextInt();
+		chosenClass = strClass[j - 1];
+		System.out.println(""); // extra line
+		System.out.println("Your character's class is " + chosenClass + ".");		
+	}
+	
+	// Class for Class //
+	public void Background() {
+		
+		// Declare array for class selection //
+		String strBackground[] = {"Acolyte", "Actor", "Criminal", "Folk Hero",
+				"Noble", "Outlander", "Sage", "Soldier", "Spy",  "Urchin"
+				};
+		System.out.println("Please enter a number to select "
+					+ "your character's class.");
+		System.out.println("1: " + strBackground[0]);
+		System.out.println("2: " + strBackground[1]);
+		System.out.println("3: " + strBackground[2]);
+		System.out.println("4: " + strBackground[3]);
+		System.out.println("5: " + strBackground[4]);
+		System.out.println("6: " + strBackground[5]);
+		System.out.println("7: " + strBackground[6]);
+		System.out.println("8: " + strBackground[7]);
+		System.out.println("9: " + strBackground[8]);
+		System.out.println("10: " + strBackground[9]);
+
+		// Save selected number input //
+		int j = myScan.nextInt();
+		chosenBackground = strBackground[j - 1];
+		System.out.println(""); // extra line
+		System.out.println("Your character's background is " + chosenBackground + ".");
+		
+	}
+	
+	// Class for Character //
+	public static void main(String args[]) {	
+		Main newCharacter = new Main();
+		
+		newCharacter.Race();
+		newCharacter.Class();
+		newCharacter.Background();
+		
+		// Results //
+		System.out.println(""); 
+		System.out.println("Congratulations on making your new character!");
+		System.out.println("Race: " + chosenRace);
+		System.out.println("Class: " + chosenClass);
+		System.out.println("Background: " + chosenBackground);
+		
+	}
+}
